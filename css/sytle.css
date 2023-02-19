@@ -1,0 +1,290 @@
+:root {
+    --primary-color: #f13a11;
+    --gray-color: #909090;
+    --white-color: #ffffff;
+    --bg-color: #f9f9f9;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* --------------- Start Global -------------- */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.main-title{
+    text-align: center;
+    margin: 40px auto;
+}
+.main-title .title{
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.main-title .line{
+    width: 100px;
+    margin: auto;
+    height: 2px;
+    background-color: #f13a11;
+}
+/* --------------- Start Header -------------- */
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.head{
+    background-color: rgb(255, 255, 255) ;
+}
+.head .logo a{
+    color: #f13a11;
+    font-size: 30px;
+    font-weight: bold;
+}
+.head .links .active{
+    color: #f13a11;
+}
+.head .links a{
+    display: inline-block;
+    color: black;
+    padding: 5px;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.head .links a:hover{
+    color: #f13a11;
+}
+/* --------------- End Header -------------- */
+/* --------------- Start Home -------------- */
+.home .container{
+    height: calc(100vh - 55px);
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.home .container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1718198f;
+}
+.home .container .home-content{
+    text-align: center;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.home .container .home-content p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #909090;
+}
+.home .container .home-content h1{
+    color: white;
+    margin: 20px 0;
+}
+.home .container .home-content button{
+    width: 200px;
+    padding: 15px;
+    margin:  0 10px;
+    color: #fff;
+    background-color: #f13a1166;
+    border-radius: 25px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s;
+}
+.home .container .home-content button:hover{
+    background-color: #f13a11;
+}
+/* --------------- End Home -------------- */
+/* --------------- Start About -------------- */
+.about-us .container .about-content{
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-us .container .about-content .about-trainer{
+    width: 35%;
+    box-shadow: 6px 0 38px rgb(20 20 20 / 10%);
+    background-color: #f9f9f9;
+    padding: 40px 30px;
+}
+.about-us .container .about-content .about-trainer p{
+    color: #909090;
+    margin-top: 20px;
+    text-align: justify;
+    line-height: 1.2;
+}
+.about-us .container .about-content .card{
+    width: 30%;
+    box-shadow: 6px 0 38px rgb(20 20 20 / 10%);
+    text-align: center;
+    padding: 10px;
+}
+.about-us .container .about-content .card .card-img{
+    height: 300px;
+}
+.about-us .container .about-content .card .card-img img{
+    width: 100%;
+    height: 100%;
+}
+.about-us .container .about-content .card .card-info p{
+    color: #909090;
+    padding-top: 10px;
+}
+.about-us .container .about-content .card .card-info i{
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+.about-us .container .about-content .card .card-info i:hover{
+    color: #f13a11;
+}
+/* --------------- End About -------------- */
+/* --------------- Start classes -------------- */
+.classes .main-title .title p{
+    font-size: 18px;
+    color: #909090;   
+}
+.classes .container .classes-card{
+    display: flex;
+    justify-content: space-between;
+}
+.classes .container .classes-card .card{
+    width: calc(96% / 3);
+    text-align: center;
+    box-shadow: 6px 0 38px rgb(20 20 20 / 10%);
+    padding: 10px;
+    border-radius: 8px;
+}
+.classes .container .classes-card .card .card-img{
+    height: 300px;
+    position: relative;
+}
+.classes .container .classes-card .card .card-img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #90909057;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    cursor: pointer;
+}
+.classes .container .classes-card .card .card-img:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+.classes .container .classes-card .card .card-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.classes .container .classes-card .card .card-info h2{
+    margin: 10px 0;
+}
+.classes .container .classes-card .card .card-info p{
+    color: #909090;
+    line-height: 1.5;
+}
+.classes .container .classes-card .card .card-info span{
+    color: black;
+}
+.classes .container .classes-card .card .card-info i{
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+.classes .container .classes-card .card .card-info i:hover{
+    color: #f13a11;
+}
+/* --------------- End classes -------------- */
+/* --------------- Start Schedule -------------- */
+.schedules .container{
+    background-color: #f9f9f9;
+    margin: 50px auto;
+}
+.schedules .container .schedules-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.schedules .container .schedules-info div{
+    width: 40%;
+    text-align: center;
+}
+.schedules-info h2{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.schedules-info h5{
+    margin-bottom: 15px;
+}
+.schedules-info p{
+    margin-bottom: 15px;
+    color: var(--gray-color);
+}
+.schedules-new button{
+    padding: 15px;
+    color: #fff;
+    background-color: #f13a11;
+    border-radius: 25px;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    cursor: pointer;
+}
+/* --------------- End Schedule -------------- */
+/* --------------- Start Footer -------------- */
+footer{
+    padding: 30px 0;
+    text-align: center;
+    background-color:black ;
+    color: white;
+}
+footer h2{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+footer p{
+    padding: 5px;
+    line-height: 1.2;
+}
+footer i{
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    color: #f13a11;
+}
+footer span{
+    color: #f13a11;
+    cursor: pointer;
+}
+/* --------------- End Footer -------------- */
